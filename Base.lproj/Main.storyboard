@@ -25,34 +25,48 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PiF-Lk-b7u"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey did you know i love you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-Rd-dmE">
-                                <rect key="frame" x="77.5" y="95" width="220" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-Rd-dmE">
+                                <rect key="frame" x="152.5" y="95" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoU-Kr-41C">
-                                <rect key="frame" x="172.5" y="399" width="30" height="30"/>
-                                <state key="normal" title="NO"/>
-                                <connections>
-                                    <action selector="NO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qEr-jZ-IT4"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkM-vM-pEP">
+                                <rect key="frame" x="139.5" y="150" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Akg-hw-eGE"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9H-Ca-i5f">
+                                <rect key="frame" x="139.5" y="210" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QAz-kC-BkJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="o9H-Ca-i5f" firstAttribute="top" secondItem="OkM-vM-pEP" secondAttribute="bottom" constant="30" id="6g7-el-Ui6"/>
                             <constraint firstItem="HT2-Rd-dmE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OTr-ct-HeG"/>
-                            <constraint firstItem="LoU-Kr-41C" firstAttribute="top" secondItem="1CK-gP-yR9" secondAttribute="bottom" constant="21.5" id="RLC-BI-sac"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LoU-Kr-41C" secondAttribute="trailing" constant="172.5" id="S9E-66-NeE"/>
+                            <constraint firstItem="OkM-vM-pEP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="VDs-bf-YIx"/>
                             <constraint firstItem="1CK-gP-yR9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="W5T-R2-iFv"/>
                             <constraint firstItem="HT2-Rd-dmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="d91-UA-80M"/>
-                            <constraint firstItem="LoU-Kr-41C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172.5" id="oMo-NT-PXA"/>
+                            <constraint firstItem="OkM-vM-pEP" firstAttribute="top" secondItem="HT2-Rd-dmE" secondAttribute="bottom" constant="34" id="sH2-Fw-EMK"/>
                             <constraint firstItem="1CK-gP-yR9" firstAttribute="top" secondItem="HT2-Rd-dmE" secondAttribute="bottom" constant="232" id="vxM-7a-qg4"/>
+                            <constraint firstItem="o9H-Ca-i5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="ysX-ZU-zFa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="label" destination="HT2-Rd-dmE" id="RpR-Hr-XLe"/>
+                        <outlet property="text1" destination="OkM-vM-pEP" id="Zna-0L-L7C"/>
+                        <outlet property="text2" destination="o9H-Ca-i5f" id="DqI-zG-4d9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
